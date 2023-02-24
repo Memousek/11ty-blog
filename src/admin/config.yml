@@ -44,5 +44,10 @@ collections:
         name: "homepage"
         file: "/src/_data/homepage.json"
         fields:
-          - name: items
-            label: Kalendereintrag
+          - name: hero
+            label: hero
+            widget: list
+            fields:
+              - name: title
+                label: title
+                widget: "string"
