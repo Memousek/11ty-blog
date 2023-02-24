@@ -51,16 +51,22 @@ collections:
               - name: title
                 label: title
                 widget: "string"
+              - name: text
+                label: text
+                widget: "string"
+              - name: image
+                label: image
+                widget: "image"
       - label: "Meta Data"
         name: "meta"
         file: "/src/_data/site.json"
         fields:
           - name: name
             label: name
-            widget: string
+            widget: "string"
           - name: description
             label: description
-            widget: string
+            widget: "string"
           - name: favicon
             label: favicon
-            widget: image
+            widget: "image"
