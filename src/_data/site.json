@@ -1,8 +1,8 @@
 {
-    "name": "Site name",
-    "url": "/",
-    "authorName": "Vojtěch Kalný",
-    "authorUrl": "https://mikeaparicio.com",
-    "description": "Description",
-    "favicon": "https://www.drupal.org/files/issues/2020-02-20/favicon.png"
-  }
+  "name": "Vojtěch Kalný",
+  "url": "/",
+  "authorName": "Vojtěch Kalný",
+  "authorUrl": "https://mikeaparicio.com",
+  "description": "Description",
+  "favicon": "https://www.drupal.org/files/issues/2020-02-20/favicon.png"
+}
