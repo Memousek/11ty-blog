@@ -1,105 +1,45 @@
 backend:
   name: git-gateway
   branch: main
-media_folder: public/assets/blog
-public_folder: /assets/blog
-collections:
-  - name: blog
-    label: Blog
-    folder: src/blog
+media_folder: "public/assets/blog"
+public_folder: "/assets/blog"
+collections: 
+  - name: "blog"
+    label: "Blog"
+    folder: "src/blog"
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    fields:
-      - label: Title
-        name: title
-        widget: string
-      - label: Description
-        name: description
-        widget: string
-      - label: Author
-        name: author
-        widget: string
-      - label: Date
-        name: date
-        widget: datetime
-      - label: Tags
-        name: tags
-        widget: list
-        default:
-          - post
-      - label: Featured Image
-        name: image
-        widget: image
-      - label: Image Alt
-        name: imageAlt
-        widget: string
-      - label: Body
-        name: body
-        widget: markdown
-  - name: page
-    label: Page
-    folder: src/page
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields: 
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Image Alt", name: "imageAlt", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "page"
+    label: "Page"
+    folder: "src/page"
     create: true
-    slug: '{{slug}}'
-    fields:
-      - label: Title
-        name: title
-        widget: string
-      - label: Description
-        name: description
-        widget: string
-      - label: Author
-        name: author
-        widget: string
-      - label: Date
-        name: date
-        widget: datetime
-      - label: Body
-        name: body
-        widget: markdown
-      - label: Tags
-        name: tags
-        widget: hidden
-        default:
-          - page
-      - label: Permalink
-        name: permalink
-        widget: hidden
-        default: '/{{ title | slugify }}/'
-  - name: homepage
-    label: homepage
-    create: false
+    slug: "{{slug}}"
+    fields: 
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Tags", name: "tags", widget: "hidden", default: ["page"] }
+      - { label: "Permalink", name: "permalink", widget: "hidden", default: "/{{ title | slugify }}/"}
+  - name: "homepage"
+    label: "homepage"
+    create: false 
     delete: false
     extension: json
     format: json
-    editor:
+    editor: 
       preview: true
-      files:
-        - label: homepage
-          name: homepage
-          file: /src/_data/homepage.json
-          fields:
-            - name: hero
-              label: Hero
-              widget: list
-              fields:
-                - name: title
-                  label: title
-                  required: true
-                  widget: text
-                - name: text
-                  label: text
-                  widget: string
-                - name: image
-                  label: img
-                  required: true
-                  widget: image
-                - name: color
-                  hint: 'von 1-3 wird die Farbe immer satter, 4 ist grau.'
-                  label: Farbe
-                  widget: select
-                  options:
-                    - '1'
-                    - '2'
-                    - '3'
-                    - '4'
+    files:
+      - label: "homepage"
+        name: "homepage"
+        file: "/src/_data/homepage.json"
