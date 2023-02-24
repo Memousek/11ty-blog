@@ -6,16 +6,16 @@ layout: "base.njk"
 <section class="hero">
   <div class="container flow">
     <div class="hero__content flow">
-      <h1 class="section-title">{{ homepage.homepage.hero.title | safe }}</h1>
+      <h1 class="section-title">{{ homepage.title | safe }}</h1>
       <p>
-        {{ homepage.homepage.hero.text | safe }}
+        {{ homepage.text | safe }}
       </p>
       <div class="flex-group">
-        <a href="{{ homepage.homepage.hero.button.link }}" class="btn btn--primary">{{ homepage.homepage.hero.button.title }}</a>
+        <a href="{{ homepage.buttonlink }}" class="btn btn--primary">{{ homepage.buttontext }}</a>
       </div>
     </div>
     <div>
-      <img src="{{ homepage.homepage.hero.image }}" alt="" class="hero__image" />
+      <img src="{{ homepage.image }}" alt="" class="hero__image" style="max-width: 350px; margin: 0 auto;" />
     </div>
   </div>
 </section>

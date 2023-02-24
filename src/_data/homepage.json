@@ -1,15 +1,4 @@
 {
-  "hero": [
-    {
-      "title": "Title",
-      "text": "Lorem ipsum",
-      "image": "/assets/blog/article-1.jpg",
-      "button": {
-        "title": "Featured articles",
-        "link": "#featured-articles"
-      }
-    }
-  ],
   "title": "asd",
   "text": "asd",
   "image": "/assets/blog/idea.png"

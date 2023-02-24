@@ -53,6 +53,12 @@ collections:
             - name: image
               label: image
               widget: "image"
+            - name: buttontext
+              label: Button Text
+              widget: "string"
+            - name: buttonlink
+              label: Button Link
+              widget: "string"
       - label: "Meta Data"
         name: "meta"
         file: "/src/_data/site.json"
