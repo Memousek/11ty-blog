@@ -44,19 +44,15 @@ collections:
         name: "hero"
         file: "/src/_data/homepage.json"
         fields:
-          - name: hero
-            label: hero
-            widget: list
-            fields:
-              - name: title
-                label: title
-                widget: "string"
-              - name: text
-                label: text
-                widget: "string"
-              - name: image
-                label: image
-                widget: "image"
+            - name: title
+              label: title
+              widget: "string"
+            - name: text
+              label: text
+              widget: "string"
+            - name: image
+              label: image
+              widget: "image"
       - label: "Meta Data"
         name: "meta"
         file: "/src/_data/site.json"
