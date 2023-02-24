@@ -12,10 +12,18 @@ module.exports = function(eleventyConfig) {
 
     eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
+    eleventyConfig.setBrowserSyncConfig({
+		files: './public/css/**/*.css'
+	});
+    
+
     return {
         dir: {
             input: "src",
             output: "public"
-        }
+        },
+        url: process.env.URL || "http://localhost:8080",
+        "siteName": "asd",
+        "siteDescription": ""
     };
 }

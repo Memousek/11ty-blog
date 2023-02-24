@@ -31,3 +31,36 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "hidden", default: ["page"] }
       - { label: "Permalink", name: "permalink", widget: "hidden", default: "/{{ title | slugify }}/"}
+ - name: "homepage" # Used in routes, e.g., /admin/collections/blog
+    label: "homepage"
+    create: false # Allow users to create new documents in this collection
+    delete: false
+    extension: json
+    format: json
+    editor:
+      preview: true
+    files:
+      - label: "homepage"
+        name: "homepage"
+        file: "/src/_data/homepage.json"
+        fields:
+          - name: hero
+            label: Hero
+            widget: list
+            fields:
+              - name: title
+                label: title
+                required: true
+                widget: "text"
+              - name: text
+                label: text
+                widget: string
+              - name: image
+                label: img
+                required: true
+                widget: image
+              - name: color
+                hint: "von 1-3 wird die Farbe immer satter, 4 ist grau."
+                label: Farbe
+                widget: "select"
+                options: ["1", "2", "3", "4"]

@@ -6,25 +6,16 @@ layout: "base.njk"
 <section class="hero">
   <div class="container flow">
     <div class="hero__content flow">
-      <h1 class="section-title">Welcome to my blog!</h1>
+      <h1 class="section-title">{{ homepage.homepage.hero.title | safe }}</h1>
       <p>
-        I use this space to document my adventures in front-end development,
-        sharing how I’ve overcome issues I’ve run into, useful resources, and
-        more.
-      </p>
-      <p>
-        Below are some of my favourite articles, or you can go to the blog page
-        to see my most recent posts.
+        {{ homepage.homepage.hero.text | safe }}
       </p>
       <div class="flex-group">
-        <a href="#featured-articles" class="btn btn--primary"
-          >Featured articles</a
-        >
-        <a href="./blog" class="btn btn--neutral">Most recent articles</a>
+        <a href="{{ homepage.homepage.hero.button.link }}" class="btn btn--primary">{{ homepage.homepage.hero.button.title }}</a>
       </div>
     </div>
     <div>
-      <img src="//unsplash.it/510" alt="" class="hero__image" />
+      <img src="{{ homepage.homepage.hero.image }}" alt="" class="hero__image" />
     </div>
   </div>
 </section>
