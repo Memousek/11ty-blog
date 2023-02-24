@@ -51,8 +51,8 @@ collections:
               - name: title
                 label: title
                 widget: "string"
-      - label: "hero"
-        name: "hero"
+      - label: "site"
+        name: "site"
         file: "/src/_data/site.json"
         fields:
           - name: name
