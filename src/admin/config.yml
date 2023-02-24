@@ -38,7 +38,7 @@ collections:
     extension: json
     format: json
     editor: 
-      preview: true
+      preview: false
     files:
       - label: "hero"
         name: "hero"
@@ -51,10 +51,16 @@ collections:
               - name: title
                 label: title
                 widget: "string"
-      - label: "site"
-        name: "site"
+      - label: "Meta Data"
+        name: "meta"
         file: "/src/_data/site.json"
         fields:
           - name: name
             label: name
             widget: string
+          - name: description
+            label: description
+            widget: string
+          - name: favicon
+            label: favicon
+            widget: image
