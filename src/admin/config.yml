@@ -40,8 +40,8 @@ collections:
     editor: 
       preview: true
     files:
-      - label: "homepage"
-        name: "homepage"
+      - label: "hero"
+        name: "hero"
         file: "/src/_data/homepage.json"
         fields:
           - name: hero
@@ -51,3 +51,10 @@ collections:
               - name: title
                 label: title
                 widget: "string"
+      - label: "hero"
+        name: "hero"
+        file: "/src/_data/site.json"
+        fields:
+          - name: name
+            label: name
+            widget: string
