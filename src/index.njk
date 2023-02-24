@@ -11,7 +11,8 @@ layout: "base.njk"
         {{ homepage.text | safe }}
       </p>
       <div class="flex-group">
-        <a href="{{ homepage.buttonlink }}" class="btn btn--primary">{{ homepage.buttontext }}</a>
+        <a href="{{ homepage.buttonlink }}" target="_blank" aria-label="{{ homepage.buttontext }}"
+          class="btn btn--primary">{{ homepage.buttontext }}</a>
       </div>
     </div>
     <div>
@@ -29,7 +30,7 @@ layout: "base.njk"
     </p>
     <ul role="list" class="articles__list flow">
       {%- for post in collections.featured | reverse -%}
-        {% include "article-snippet.njk" %}
+      {% include "article-snippet.njk" %}
       {%- endfor -%}
     </ul>
   </div>
