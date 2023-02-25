@@ -63,10 +63,17 @@ collections:
         name: "ourwork"
         file: "/src/_data/ourwork.json"
         fields:
-            - label: "Carousel"
+            - label: "Our work description"
+              name: "description"
+              widget: "string"
+            - label: "Carousel item"
               name: "carousel"
               widget: "list"
-              field: {label: Image, name: image, widget: image}
+              fields: 
+                - {label: Title, name: title, widget: straing}
+                - {label: Image, name: image, widget: image}
+                - {label: Image Alt, name: imagealt, widget: string}
+                - {label: Link, name: link, widget: string}
       - label: "Settings"
         name: "settings"
         file: "/src/_data/homepage.json"
