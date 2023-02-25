@@ -47,15 +47,17 @@ layout: "base.njk"
   <div class="container flow">
     <h2 class="section-title text-center">Our work</h2>
     <p class="text-center">
-      Here is some of our work.
+      {{ ourwork.description }}
     </p>
     <div id="my-keen-slider" class="keen-slider">
+      {% for carousel in ourwork.carousel %}
       <div class="keen-slider__slide">
-        <a href="">
-          <img src="{{ carusel1.image }}" alt="{{ carusel1.text }}">
-          {{ carusel1.text }}
+        <a href="{{carousel.link}}">
+          <img src="{{ carousel.image }}" alt="{{ carousel.text }}">
+          {{ carousel.text }}
         </a>
       </div>
+      {% endfor %}
     </div>
     <script src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.js"></script>
     <script>
