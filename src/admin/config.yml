@@ -59,17 +59,14 @@ collections:
             - name: buttonlink
               label: Button Link
               widget: "string"
-        - label: "Our work"
-          name: "ourwork"
-          file: "/src/_data/ourwork.json"
-          fields:
-              - name: text
-                  label: Our work description
-                  widget: "string"
-              - label: "Carusel"
-                  name: "carusel"
-                  widget: "list"
-                  field: {label: Image, name: image, widget: image}
+      - label: "Our work section"
+        name: "ourwork"
+        file: "/src/_data/ourwork.json"
+        fields:
+            - label: "Carousel"
+              name: "carousel"
+              widget: "list"
+              field: {label: Image, name: image, widget: image}
       - label: "Settings"
         name: "settings"
         file: "/src/_data/homepage.json"
