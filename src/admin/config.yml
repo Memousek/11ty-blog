@@ -70,7 +70,7 @@ collections:
               name: "carousel"
               widget: "list"
               fields: 
-                - {label: Title, name: title, widget: straing}
+                - {label: Title, name: title, widget: string}
                 - {label: Image, name: image, widget: image}
                 - {label: Image Alt, name: imagealt, widget: string}
                 - {label: Link, name: link, widget: string}
