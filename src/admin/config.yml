@@ -59,7 +59,7 @@ collections:
             - name: buttonlink
               label: Button Link
               widget: "string"
-      - label: "Settings Section"
+      - label: "Settings"
         name: "settings"
         file: "/src/_data/homepage.json"
         fields:
