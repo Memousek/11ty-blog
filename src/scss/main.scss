@@ -1,3 +1,24 @@
 html {
     scroll-behavior: smooth;
 }
+
+.keen-slider {
+    text-align: center;
+    margin-top: 40px;
+
+    img {
+        max-height: 300px;
+        margin: 0 auto;
+    }
+
+    .keen-slider__slide {
+        font-weight: var(--fw-700);
+        border: 2px solid var(--clr-primary-400);
+        border-radius: 6px;
+
+        a {
+            color: var(--clr-primary-400);
+            text-decoration: none;
+        }
+    }
+}

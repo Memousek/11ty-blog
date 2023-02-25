@@ -40,3 +40,72 @@ layout: "base.njk"
   </div>
 </section>
 {% endif %}
+
+
+{% if homepage.ourworkvisible %}
+<section id="" class="">
+  <div class="container flow">
+    <h2 class="section-title text-center">Our work</h2>
+    <p class="text-center">
+      Here is some of our work.
+    </p>
+    <div id="my-keen-slider" class="keen-slider">
+      <div class="keen-slider__slide">
+        <a href="">
+          <img src="{{ carusel1.image }}" alt="{{ carusel1.text }}">
+          {{ carusel1.text }}
+        </a>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.js"></script>
+    <script>
+      var slider = new KeenSlider(
+        "#my-keen-slider",
+        {
+          loop: true,
+          breakpoints: {
+            "(min-width: 400px)": {
+              slides: { perView: 2, spacing: 5 },
+            },
+            "(min-width: 1000px)": {
+              slides: { perView: 3, spacing: 10 },
+            },
+          },
+          slides: { perView: 1 },
+        },
+
+        [
+          (slider) => {
+            let timeout
+            let mouseOver = false
+            function clearNextTimeout() {
+              clearTimeout(timeout)
+            }
+            function nextTimeout() {
+              clearTimeout(timeout)
+              if (mouseOver) return
+              timeout = setTimeout(() => {
+                slider.next()
+              }, 2000)
+            }
+            slider.on("created", () => {
+              slider.container.addEventListener("mouseover", () => {
+                mouseOver = true
+                clearNextTimeout()
+              })
+              slider.container.addEventListener("mouseout", () => {
+                mouseOver = false
+                nextTimeout()
+              })
+              nextTimeout()
+            })
+            slider.on("dragStarted", clearNextTimeout)
+            slider.on("animationEnded", nextTimeout)
+            slider.on("updated", nextTimeout)
+          },
+        ]
+      )
+    </script>
+  </div>
+</section>
+{% endif %}

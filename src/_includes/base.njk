@@ -1,35 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ site.name }}</title>
-    <meta name="author" content="{{ site.authorName }}">
-    <meta name="description" content="{{ site.description }}">
-    <link rel="icon" href="{{ site.favicon }}" type="image/svg+xml" />
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/css/main.css">
-    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.name }}</title>
+  <meta name="author" content="{{ site.authorName }}">
+  <meta name="description" content="{{ site.description }}">
+  <link rel="icon" href="{{ site.favicon }}" type="image/svg+xml" />
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.css" />
 </head>
+
 <body>
-    {% include "header.njk" %}
-    <main>
-        {{ content | safe }}
-    </main>
-    {% include "footer.njk" %}
+  {% include "header.njk" %}
+  <main>
+    {{ content | safe }}
+  </main>
+  {% include "footer.njk" %}
 
 
-    <script>
-        if (window.netlifyIdentity) {
-          window.netlifyIdentity.on("init", user => {
-            if (!user) {
-              window.netlifyIdentity.on("login", () => {
-                document.location.href = "/admin/";
-              });
-            }
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
           });
         }
-      </script>
+      });
+    }
+  </script>
+
+  <script src="/scripts/fslightbox.js"></script>
 </body>
+
 </html>

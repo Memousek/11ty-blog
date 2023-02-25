@@ -1,9 +1,10 @@
 const { DateTime } = require("luxon");
 
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy("./src/style.css");
     eleventyConfig.addPassthroughCopy("./src/assets");
+    eleventyConfig.addPassthroughCopy("./src/scripts");
     eleventyConfig.addPassthroughCopy("./src/admin");
 
     eleventyConfig.addFilter("postDate", (dateObj) => {
@@ -13,17 +14,14 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
     eleventyConfig.setBrowserSyncConfig({
-		files: './public/css/**/*.css'
-	});
-    
+        files: './public/css/**/*.css'
+    });
+
 
     return {
         dir: {
             input: "src",
             output: "public"
-        },
-        url: process.env.URL || "http://localhost:8080",
-        "siteName": "asd",
-        "siteDescription": ""
+        }
     };
 }

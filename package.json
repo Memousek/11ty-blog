@@ -28,6 +28,7 @@
     "sass": "^1.58.3"
   },
   "dependencies": {
+    "fslightbox": "^3.4.1",
     "slugify": "^1.6.5"
   }
 }
