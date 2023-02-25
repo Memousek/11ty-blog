@@ -53,8 +53,8 @@ layout: "base.njk"
       {% for carousel in ourwork.carousel %}
       <div class="keen-slider__slide">
         <a href="{{carousel.link}}">
-          <img src="{{ carousel.image }}" alt="{{ carousel.text }}">
-          {{ carousel.text }}
+          <img src="{{ carousel.image }}" alt="{{ carousel.imagealt }}">
+          {{ carousel.title }}
         </a>
       </div>
       {% endfor %}
