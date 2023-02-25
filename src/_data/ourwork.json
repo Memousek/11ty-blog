@@ -1,0 +1,11 @@
+{
+  "carousel": [
+    {
+      "title": "test",
+      "image": "/assets/blog/idea.png",
+      "imagealt": "asd",
+      "link": "https://seznam.cz"
+    }
+  ],
+  "description": "test"
+}
