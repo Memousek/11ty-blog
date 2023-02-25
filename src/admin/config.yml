@@ -42,7 +42,7 @@ collections:
     files:
       - label: "Hero Section"
         name: "hero"
-        file: "/src/_data/homepage.json"
+        file: "/src/_data/hero.json"
         fields:
             - name: title
               label: title
@@ -59,6 +59,18 @@ collections:
             - name: buttonlink
               label: Button Link
               widget: "string"
+      - label: "Settings Section"
+        name: "settings"
+        file: "/src/_data/homepage.json"
+        fields:
+            - name: herovisible
+              label: Is Hero section visible?
+              widget: "boolean"
+              default: true
+            - name: articlesvisible
+              label: Is Featured articles section visible?
+              widget: "boolean"
+              default: true
   - name: "settings"
     label: "Settings"
     create: false 

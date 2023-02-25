@@ -3,24 +3,28 @@ title: 11ty Blog
 layout: "base.njk"
 ---
 
+{% if homepage.herovisible %}
 <section class="hero">
   <div class="container flow">
     <div class="hero__content flow">
-      <h1 class="section-title">{{ homepage.title | safe }}</h1>
+      <h1 class="section-title">{{ hero.title | safe }}</h1>
       <p>
-        {{ homepage.text | safe }}
+        {{ hero.text | safe }}
       </p>
       <div class="flex-group">
-        <a href="{{ homepage.buttonlink }}" target="_blank" aria-label="{{ homepage.buttontext }}"
-          class="btn btn--primary">{{ homepage.buttontext }}</a>
+        <a href="{{ hero.buttonlink }}" target="_blank" aria-label="{{ hero.buttontext }}" class="btn btn--primary">{{
+          hero.buttontext }}</a>
       </div>
     </div>
     <div>
-      <img src="{{ homepage.image }}" alt="" class="hero__image" style="max-width: 350px; margin: 0 auto;" />
+      <img src="{{ hero.image }}" alt="" class="hero__image" style="max-width: 350px; margin: 0 auto;" />
     </div>
   </div>
 </section>
+{% endif %}
 
+
+{% if homepage.articlesvisible %}
 <section id="featured-articles" class="featured-articles">
   <div class="container flow">
     <h2 class="section-title text-center">Featured articles</h2>
@@ -35,3 +39,4 @@ layout: "base.njk"
     </ul>
   </div>
 </section>
+{% endif %}
