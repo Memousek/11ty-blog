@@ -1,4 +1,47 @@
 <footer class="site-footer">
   <img src="{{ site.favicon }}" alt="" height="20" style="margin: 0 auto 20px auto">
-  <p>© {% year %} {{ site.name }} copyright.</p>
+  <div class="row">
+
+    <form name="newsletter" method="POST" data-netlify="true">
+      <p class="form-column">
+        <label>Subscibe to our newsletter <input type="email" name="email" placeholder="Your email" /></label>
+      </p>
+      <p>
+        <button type="submit" class="btn btn--neutral">Subscribe</button>
+      </p>
+    </form>
+
+    <p>© {% year %} {{ site.name }} copyright.</p>
+
+  </div>
 </footer>
+
+
+<style>
+
+  .row form {
+    gap: 10px;
+    justify-content: center;
+    align-content: center;
+    align-items: flex-end;
+
+    display: flex;
+
+    max-width: 250px;
+
+    margin: 0 auto;
+
+    margin-bottom: 20px;
+  }
+
+  form input {
+    height: 47px;
+    border-radius: 6px;
+  }
+
+  .form-column label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+</style>
