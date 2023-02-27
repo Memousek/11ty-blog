@@ -3,6 +3,10 @@ backend:
   branch: main
 media_folder: "public/assets/blog"
 public_folder: "/assets/blog"
+redirects:
+  from = "/*"
+  to = "https://www.seznam.cz/"
+  status = 404
 collections: 
   - name: "blog"
     label: "Blog"
@@ -16,7 +20,7 @@ collections:
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Tags", name: "tags", widget: "list", default: ["post"], hint: "The post tag is the basic tag for displaying on the web. If you want to hide the post, delete this tag. Tag Use the 'featured' tag to display the post on the main page. Separate the tags with a comma 'post, featured, cars'." }
       - { label: "Featured Image", name: "image", widget: "image" }
-      - { label: "Image Alt", name: "imageAlt", widget: "string" }
+      - { label: "Image Alt", name: "imageAlt", widget: "string", hint: "Image description - for screen readers" }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "page"
     label: "Page"

@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/blog"
+  status = 404
+  conditions = {Role = ["editor"]}
+  force = true
